@@ -1,5 +1,5 @@
-import orderByProps from './sort.js'
-import destructuring from './destructuring.js'
+import orderByProps from './sort.js';
+import destructuring from './destructuring.js';
 
 const obj = {
   name: 'мечник',
@@ -26,13 +26,10 @@ const character = {
     {
       id: 9,
       name: 'Нокаутирующий удар',
-      icon: 'http://...'
-      // <- обратите внимание, описание "засекречено"
+      icon: 'http://...' // описание "засекречено"
     }
   ]
 }
 
-
-console.log(orderByProps(obj, ['name', 'level']))
-
-console.log(destructuring(character))
+console.log(orderByProps(obj, ['name', 'level']));
+console.log(destructuring(character));

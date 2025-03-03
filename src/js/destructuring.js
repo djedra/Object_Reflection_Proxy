@@ -1,15 +1,8 @@
-export default function destructuring(characterObject) {
-  const array = []
-
-  for (const prop of characterObject.special) {
-    if ('description' in prop) {
-      array.push(prop)
-    } else {
-      const addDescription = prop
-
-      addDescription['description'] = 'Описание недоступно'
-      array.push(addDescription)
-    }
-  }
-  return array
+export default function destructuring({ special }) {
+  return special.map(({ id, name, icon, description }) => ({
+    id,
+    name,
+    icon,
+    description: description || 'Описание недоступно',
+  }));
 }
